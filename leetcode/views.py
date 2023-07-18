@@ -200,6 +200,7 @@ def verdictPage(request, user_id, question_id):
         user_stdout = ""
         if verdict == "Compilation Error":
             user_stderr = cmp.stderr.decode('utf-8')
+            score = 0
 
         elif verdict == "Wrong Answer":
             user_stdout = res.stdout.decode('utf-8')
